@@ -16,14 +16,14 @@ module.exports.saveTodo = async (req, res) => {
 };
 
 module.exports.updateToDo = async (req, res) => {
-	const { id, text } = req.body;
+	const { _id, text } = req.body;
 	ToDoModel.findByIdAndUpdate(_id, { text })
 	  .then(() => res.send("Update Succesfully"))
 	  .catch((err) => console.log(err));
   };
   
   module.exports.deleteToDo = async (req, res) => {
-	const { id, text } = req.body;
+	const { _id, text } = req.body;
 	ToDoModel.findByIdAndDelete(_id)
 	  .then(() => res.send("Deleted Succesfully"))
 	  .catch((err) => console.log(err));
