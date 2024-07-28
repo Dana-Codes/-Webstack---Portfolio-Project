@@ -5,7 +5,7 @@ const router = Router();
 
 router.get("/", getToDo);
 router.post("/save", saveTodo);
-router.get("/update", updateToDo);
-router.post("/delete", deleteToDo);
+router.put("/update", updateToDo);  // Changed to PUT
+router.delete("/delete/:id", deleteToDo);  // Changed to DELETE and added :id
 
 module.exports = router;
